@@ -1,93 +1,67 @@
-* {
+body,
+html {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
 }
-.container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.section1 {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(128, 70, 70);
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4 {
   position: relative;
-  z-index: 2; /* Ensure line1 is on top of section2 */
+  /* opacity: 0.65; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.line1 {
-  width: 170px;
-  height: 170px;
-  border: 2px solid black;
-  border-radius: 100px;
-  position: sticky;
-  top: 10px;
-  left: 88vw;
-  background-color: yellow;
-  z-index: 1;
+.bgimg-1 {
+  background-image: url("/images/girl-1.png");
+  min-height: 100%;
 }
-
-.section2 {
-  margin-top: -170px; /* Offset for line1's height */
+.bgimg-2 {
+  background-image: url("/images/girl-2.png");
+  /* min-height: 400px; */
   height: 100vh;
-  background-color: bisque;
-  width: 100vw;
 }
-
-.line2 {
-  width: 140px;
-  height: 140px;
-  border: 2px solid red;
-  border-radius: 100px;
-  background-color: chocolate;
-  position: sticky;
-  top: 25px;
-  left: 88.8vw;
-  z-index: 2;
-}
-
-.section3 {
+.bgimg-3 {
+  background-image: url("/images/girl-3.png");
   height: 100vh;
-  background-color: aqua;
-  width: 100vw;
+  min-height: 400px;
 }
-.line3 {
-  width: 110px;
-  height: 110px;
-  border: 2px solid red;
-  border-radius: 100px;
-  background-color: rgb(226, 226, 226);
-  position: sticky;
-  top: 39px;
-  left: 89.5vw;
-  z-index: 3;
-}
-
-.section4 {
+.bgimg-4 {
+  background-image: url("/images/final-girl.png");
   height: 100vh;
-  background-color: black;
-  width: 100vw;
+  min-height: 400px;
 }
-.line4 {
-  width: 90px;
-  height: 90px;
-  border: 2px solid red;
-  border-radius: 100px;
-  background-color: rgb(21, 102, 224);
-  position: sticky;
-  top: 49px;
-  left: 90vw;
-  z-index: 4;
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
 }
-.section5 {
-  height: calc(100vh - 170px); /* Adjust height to account for line1 height */
-  background-color: black;
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
 }
-
-.section6 {
-  height: calc(100vh - 170px); /* Adjust height to account for line1 height */
-  background-color: rgb(0, 235, 156);
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3,
+  .bgimg-4 {
+    background-attachment: scroll;
+  }
 }
